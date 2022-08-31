@@ -1,8 +1,7 @@
 package duke;
 
-import java.time.format.DateTimeParseException;
-
 import java.io.IOException;
+import java.time.format.DateTimeParseException;
 
 /**
  * The class that sets up the other classes to run.
@@ -19,13 +18,13 @@ public class Duke {
      *
      * @param filePath  The String that is the relative path to the text document.
      */
-    public Duke (String filePath) {
+    public Duke(String filePath) {
         this.storage = new Storage(filePath);
         this.tasks = new TaskList();
         this.parser = new Parser(this.storage, this.tasks);
         this.ui = new Ui(this.parser);
         try {
-           this.parser.load();
+            this.parser.load();
             System.out.println("Hello! I'm Duke\nWhat can I do for you?\n" );
         } catch (IOException e) {
             System.out.println("Something went wrong: " + e.getMessage());
@@ -43,7 +42,7 @@ public class Duke {
         this.ui.run();
     }
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         new Duke("data/tasks.txt").run();
     }
 }

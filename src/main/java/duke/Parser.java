@@ -1,18 +1,14 @@
 package duke;
 
 import java.io.IOException;
-
 import java.util.regex.Pattern;
 
 /**
  * Parses the response taken by user from Ui.
  */
 public class Parser {
-
-	private static Pattern CHECKSTRING = Pattern.compile("-?\\d+");
-
+    private static Pattern CHECKSTRING = Pattern.compile("-?\\d+");
 	private boolean isDone;
-
 	private Storage storage;
 	private TaskList tasks;
 

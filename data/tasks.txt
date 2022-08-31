@@ -1,5 +1,3 @@
-T | false | todo
-D | false | deadline | 2022-12-20 1800
+T | true | todo
 D | false | todo | 2022-12-20 1800
-E | true | event | 2022-12-20 1200
-E | true | todo | 2022-12-20 1200
+E | false | todo | 2022-12-20 1200
